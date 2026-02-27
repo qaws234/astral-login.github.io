@@ -33,5 +33,28 @@
             </div>
         </form>
     </div>
+    <script>
+        // Логика проверки входа
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            // Отменяем стандартную отправку формы, чтобы страница не перезагрузилась
+            event.preventDefault();
+
+            // Получаем данные из полей ввода
+            const userField = document.getElementById('username').value;
+            const passField = document.getElementById('password').value;
+
+            // Твой будущий домен (замени '#' на нужную ссылку)
+            const targetUrl = "#"; 
+
+            // Проверка условий: login - test, password - test
+            if (userField === 'test' && passField === 'test') {
+                alert('Доступ разрешен! Переходим на сайт...');
+                window.location.href = targetUrl; // Перенаправление пользователя
+            } else {
+                alert('Ошибка: Неверный логин или пароль!');
+            }
+        });
+    </script>
 </body>
+
 </html>
