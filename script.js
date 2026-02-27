@@ -10,7 +10,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const targetUrl = "http://astral-main-page.p7z.ru/"; 
 
     // Проверка данных
-    if (username === 'testtest!1' && password === 'testtest!1') {
+    if (username === 'testtest!1' && password === 'test!1') {
         alert('Вход выполнен успешно!');
         window.location.href = targetUrl; // Перенаправление
     } else {
@@ -18,3 +18,4 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     }
 
 });
+
