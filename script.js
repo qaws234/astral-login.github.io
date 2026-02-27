@@ -7,13 +7,14 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const password = document.getElementById('password').value;
 
     // Ссылка, куда перейдет пользователь (замените '#' на ваш домен)
-    const targetUrl = "https://your-domain-here.com"; 
+    const targetUrl = "http://astral-main-page.p7z.ru/"; 
 
     // Проверка данных
-    if (username === 'test' && password === 'test') {
+    if (username === 'testtest!1' && password === 'testtest!1') {
         alert('Вход выполнен успешно!');
         window.location.href = targetUrl; // Перенаправление
     } else {
         alert('Неверный логин или пароль. Попробуйте снова.');
     }
+
 });
