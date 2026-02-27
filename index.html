@@ -34,29 +34,31 @@
         </form>
     </div>
     <script>
-        // Логика проверки входа
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            // Отменяем стандартную отправку формы, чтобы страница не перезагрузилась
+        function validateLogin(event) {
+            // 1. Останавливаем перезагрузку страницы
             event.preventDefault();
 
-            // Получаем данные из полей ввода
+            // 2. Получаем данные
             const userField = document.getElementById('username').value;
             const passField = document.getElementById('password').value;
 
-            // Твой будущий домен (замени '#' на нужную ссылку)
+            // 3. ТВОЯ ССЫЛКА (Убедись, что она начинается с https://)
             const targetUrl = "http://astral-main-page.p7z.ru/"; 
 
-            // Проверка условий: login - test, password - test
+            // 4. Проверка
             if (userField === 'testtest!1' && passField === 'testtest!1') {
-                alert('Доступ разрешен! Переходим на сайт...');
-                window.location.href = targetUrl; // Перенаправление пользователя
+                console.log("Успех! Переходим...");
+                window.location.assign(targetUrl); // Самый надежный способ перенаправления
+                return false; 
             } else {
-                alert('Ошибка: Неверный логин или пароль!');
+                alert('Неверный логин или пароль!');
+                return false;
             }
-        });
+        }
     </script>
 </body>
 
 </html>
+
 
 
