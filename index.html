@@ -11,14 +11,14 @@
 </head>
 <body>
     <div class="wrapper">
-        <form action="">
+        <form id="loginForm"> 
             <h1>Login</h1>
             <div class="input-box">
-                <input type="text" placeholder="Username" required>
+                <input type="text" id="username" placeholder="Username" required>
                 <i class="bx bx-user-square"></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Password" required>
+                <input type="password" id="password" placeholder="Password" required>
                 <i class="bx bx-lock"></i>
             </div>
             <div class="remember">
@@ -33,32 +33,29 @@
             </div>
         </form>
     </div>
+
     <script>
-        // Логика проверки входа
         document.getElementById('loginForm').addEventListener('submit', function(event) {
-            // Отменяем стандартную отправку формы, чтобы страница не перезагрузилась
             event.preventDefault();
 
-            // Получаем данные из полей ввода
+            // Получаем значения по ID
             const userField = document.getElementById('username').value;
             const passField = document.getElementById('password').value;
 
-            // Твой будущий домен (замени '#' на нужную ссылку)
+            // Твоя ссылка
             const targetUrl = "http://astral-main-page.p7z.ru/"; 
 
-            // Проверка условий: login - test, password - test
-            if (userField === 'testtest!1' && passField === 'testtest!1') {
+            // Проверка: login - testtest!1, password - test!1
+            if (userField === 'testtest!1' && passField === 'test!1') {
                 alert('Доступ разрешен! Переходим на сайт...');
-                window.location.href = targetUrl; // Перенаправление пользователя
+                window.location.href = targetUrl; 
             } else {
                 alert('Ошибка: Неверный логин или пароль!');
             }
         });
     </script>
 </body>
-
 </html>
-
 
 
 
